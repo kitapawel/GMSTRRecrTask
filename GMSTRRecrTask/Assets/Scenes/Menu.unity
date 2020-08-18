@@ -8584,7 +8584,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "Hello,\n\nthank you for reviewing my project.\n\nAll graphics are my own,
-    created in Pyxel Edit.\n\nAll sounds were downloaded from https://freesound.org/.\n\nKind
+    created in Pyxel Edit.\n\nAudio clips come from Pro Sound Collection.\n\nKind
     regards,\nPawe\u0142 Kita"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0dc4fbaf94b3f764bbd85f677e6eb2e4, type: 2}
@@ -8655,14 +8655,14 @@ MonoBehaviour:
   m_margin: {x: 0, y: 28.266968, z: -522.93994, w: -341.37863}
   m_textInfo:
     textComponent: {fileID: 1716634113}
-    characterCount: 175
+    characterCount: 163
     spriteCount: 0
-    spaceCount: 29
-    wordCount: 28
+    spaceCount: 30
+    wordCount: 27
     linkCount: 0
-    lineCount: 12
+    lineCount: 11
     pageCount: 1
-    materialCount: 3
+    materialCount: 2
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
@@ -9987,7 +9987,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
   m_spriteAsset: {fileID: 0}
   m_material: {fileID: 0}
   m_sharedMaterial: {fileID: 0}
