@@ -289,8 +289,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: Button
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 0dc4fbaf94b3f764bbd85f677e6eb2e4, type: 2}
+  m_sharedMaterial: {fileID: 7090786789581161653, guid: 0dc4fbaf94b3f764bbd85f677e6eb2e4,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -575,8 +576,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: Open panel
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 0dc4fbaf94b3f764bbd85f677e6eb2e4, type: 2}
+  m_sharedMaterial: {fileID: 7090786789581161653, guid: 0dc4fbaf94b3f764bbd85f677e6eb2e4,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1156,7 +1158,7 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 0
+          m_BoolArgument: 1
         m_CallState: 2
   m_IsOn: 1
 --- !u!1 &519420028
@@ -1946,8 +1948,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fire: {fileID: 8300000, guid: 6df897ea87e56624f9929c201eb88f44, type: 3}
+  fireToggle: {fileID: 506852309}
   water: {fileID: 8300000, guid: a7efe3081322d564daeb3598339f26bf, type: 3}
+  waterToggle: {fileID: 1631043979}
   electricity: {fileID: 8300000, guid: c82bef0ccbfb0a543b251de64ea5d645, type: 3}
+  electricityToggle: {fileID: 1572979266}
 --- !u!82 &1475312356
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2257,18 +2262,7 @@ MonoBehaviour:
   m_Group: {fileID: 0}
   onValueChanged:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1475312355}
-        m_MethodName: ToggleElectricityActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   m_IsOn: 1
 --- !u!1 &1620506186
 GameObject:
@@ -2441,7 +2435,7 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 0
+          m_BoolArgument: 1
         m_CallState: 2
   m_IsOn: 1
 --- !u!1 &1651999571

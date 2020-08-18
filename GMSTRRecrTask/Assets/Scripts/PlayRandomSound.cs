@@ -1,61 +1,67 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System.Xml.Schema;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayRandomSound : MonoBehaviour
 {
     AudioSource myAudioSource;
+    TextMeshProUGUI textMeshPro;
+
 
     [SerializeField]
     AudioClip fire;
-    bool fireActive = true;
-
+    [SerializeField]
+    Toggle fireToggle;
+    
     [SerializeField]
     AudioClip water;
-    bool waterActive = true;
+    [SerializeField]
+    Toggle waterToggle;
 
     [SerializeField]
     AudioClip electricity;
-    bool electricityActive = true;
-
+    [SerializeField]
+    Toggle electricityToggle;
 
     void Start()
     {
         myAudioSource = GetComponent<AudioSource>();
-    }
-
-    void Update()
-    {
-        
+        textMeshPro = GetComponentInChildren<TextMeshProUGUI>();
+        textMeshPro.text = "Press to play random sound";
     }
 
     public void RandomSound()
     {
         List<AudioClip> audioClips = new List<AudioClip>();
-        if (fireActive) {
+        if (fireToggle.isOn) {
             audioClips.Add(fire);
         }
-        if (waterActive) {
+        if (waterToggle.isOn) {
             audioClips.Add(water);
         }
-        if (electricityActive) {
+        if (electricityToggle.isOn) {
             audioClips.Add(electricity);
         }
-        myAudioSource.PlayOneShot(audioClips[Random.Range(0, audioClips.Count)]);
+
+        if (audioClips.Count == 0)
+        {
+            StartCoroutine(NoSoundsChosenWarning());
+        } else
+        {
+            textMeshPro.text = "Press to play random sound";
+            myAudioSource.PlayOneShot(audioClips[Random.Range(0, audioClips.Count)]);
+        }
+
     }
 
-    public void ToggleFireActive(bool value)
+    IEnumerator NoSoundsChosenWarning()
     {
-        fireActive = value;
-    }
-    public void ToggleWaterActive(bool value)
-    {
-        waterActive = value;
-    }
-    public void ToggleElectricityActive(bool value)
-    {
-        electricityActive = value;
+        textMeshPro.text = "No sounds selected";
+        yield return new WaitForSeconds(2f);
+        textMeshPro.text = "Press to play random sound";
     }
 
 }
