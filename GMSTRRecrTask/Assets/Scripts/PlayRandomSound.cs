@@ -10,7 +10,6 @@ public class PlayRandomSound : MonoBehaviour
     AudioSource myAudioSource;
     TextMeshProUGUI textMeshPro;
 
-
     [SerializeField]
     AudioClip fire;
     [SerializeField]
@@ -32,7 +31,6 @@ public class PlayRandomSound : MonoBehaviour
         textMeshPro = GetComponentInChildren<TextMeshProUGUI>();
         textMeshPro.text = "Press to play random sound";
     }
-
     public void RandomSound()
     {
         List<AudioClip> audioClips = new List<AudioClip>();
@@ -54,7 +52,6 @@ public class PlayRandomSound : MonoBehaviour
             textMeshPro.text = "Press to play random sound";
             myAudioSource.PlayOneShot(audioClips[Random.Range(0, audioClips.Count)]);
         }
-
     }
 
     IEnumerator NoSoundsChosenWarning()

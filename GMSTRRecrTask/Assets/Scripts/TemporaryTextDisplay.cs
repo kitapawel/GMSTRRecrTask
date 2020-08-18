@@ -10,18 +10,6 @@ public class TemporaryTextDisplay : MonoBehaviour
     [SerializeField]
     TextMeshProUGUI textMeshPro;
 
-
-    void Start()
-    {
-        textMeshPro.text = "";
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void OnButtonPressed()
     {
         StartCoroutine("DisplayText");
